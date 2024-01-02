@@ -39,7 +39,18 @@ def isPalindrome(x):
     return result
 
 
+#Without converting the number to string
+def isPalindrome(self, x: int):
+        result = False
+        
+        org = x
+        rev = 0
 
-x = isPalindrome(121)
-print(x)
+        while x > 0:
+            digit = x % 10
+            rev = rev * 10 + digit
+            x //= 10
+        if org == rev:
+            result = True
+        return result
     
