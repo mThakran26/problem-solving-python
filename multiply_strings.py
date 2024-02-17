@@ -1,0 +1,20 @@
+# Question: 
+
+""" Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+Note: You must not use any built-in BigInteger library or convert the inputs to integer directly. """
+
+
+# Solution: 
+class Solution:
+    def multiply(self, num1: str, num2: str) -> str:
+        d = {'0':0, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
+        n1=0
+        n2=0
+        
+        for i in num1:
+            n1 = n1*10 + d[i]
+        
+        for i in num2:
+            n2 = n2*10 + d[i]
+        
+        return str(n1*n2)
